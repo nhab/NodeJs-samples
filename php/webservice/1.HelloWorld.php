@@ -5,9 +5,7 @@ if(isset($_GET['user']) && intval($_GET['user'])) {
 	$format ='json';
 	$user_id = intval($_GET['user']); //no default
 	$posts = array("dfgh","4544",$user_id );
-	if($format == 'json') {
-		header('Content-type: application/json');
-		echo json_encode(array('posts'=>$posts));
-	}
+	header('Content-type: application/json');
+	echo json_encode(array('posts'=>$posts));
 }
 ?>
