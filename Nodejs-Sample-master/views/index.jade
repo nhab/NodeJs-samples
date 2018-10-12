@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  script(src="/javascripts/jquery-1.6.4.min.js")
+  script(src="/javascripts/view.index.js")
+
+  #left-column.column
+    h2 شخص مورد نظرتان را انتخاب کنبد
+    ul#heroes
+      each hero in heroes
+        li(class='hero-name')
+          a(href='#') #{hero}
+
+  #right-column.column
+    h2 اطلاعات اشخاص
+    ul#facts
+    label(for="new-fact") افزودن اطلاع جدید:
+    textarea#new-fact
+    a(id='add-new-fact', href='#') افزودن
